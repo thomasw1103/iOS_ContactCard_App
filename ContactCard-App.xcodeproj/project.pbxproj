@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		B71896D71DA64162006ECF3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71896D61DA64162006ECF3F /* AppDelegate.swift */; };
-		B71896D91DA64162006ECF3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71896D81DA64162006ECF3F /* ViewController.swift */; };
 		B71896DC1DA64163006ECF3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B71896DA1DA64163006ECF3F /* Main.storyboard */; };
 		B71896DF1DA64163006ECF3F /* ContactCard_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B71896DD1DA64163006ECF3F /* ContactCard_App.xcdatamodeld */; };
 		B71896E11DA64163006ECF3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B71896E01DA64163006ECF3F /* Assets.xcassets */; };
 		B71896E41DA64163006ECF3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B71896E21DA64163006ECF3F /* LaunchScreen.storyboard */; };
+		B71896EE1DACD19D006ECF3F /* OverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71896ED1DACD19D006ECF3F /* OverViewController.swift */; };
+		B71896F01DACD2FE006ECF3F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71896EF1DACD2FE006ECF3F /* Person.swift */; };
+		B71896F41DACDF6A006ECF3F /* OverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71896F31DACDF6A006ECF3F /* OverviewTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B71896D31DA64162006ECF3F /* ContactCard-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ContactCard-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B71896D61DA64162006ECF3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B71896D81DA64162006ECF3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B71896DB1DA64163006ECF3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B71896DE1DA64163006ECF3F /* ContactCard_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContactCard_App.xcdatamodel; sourceTree = "<group>"; };
 		B71896E01DA64163006ECF3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B71896E31DA64163006ECF3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B71896E51DA64163006ECF3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B71896ED1DACD19D006ECF3F /* OverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverViewController.swift; sourceTree = "<group>"; };
+		B71896EF1DACD2FE006ECF3F /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		B71896F31DACDF6A006ECF3F /* OverviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +60,9 @@
 		B71896D51DA64162006ECF3F /* ContactCard-App */ = {
 			isa = PBXGroup;
 			children = (
+				B71896F21DACD36D006ECF3F /* Controllers */,
+				B71896F11DACD353006ECF3F /* Entities */,
 				B71896D61DA64162006ECF3F /* AppDelegate.swift */,
-				B71896D81DA64162006ECF3F /* ViewController.swift */,
 				B71896DA1DA64163006ECF3F /* Main.storyboard */,
 				B71896E01DA64163006ECF3F /* Assets.xcassets */,
 				B71896E21DA64163006ECF3F /* LaunchScreen.storyboard */,
@@ -65,6 +70,23 @@
 				B71896DD1DA64163006ECF3F /* ContactCard_App.xcdatamodeld */,
 			);
 			path = "ContactCard-App";
+			sourceTree = "<group>";
+		};
+		B71896F11DACD353006ECF3F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B71896EF1DACD2FE006ECF3F /* Person.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		B71896F21DACD36D006ECF3F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B71896ED1DACD19D006ECF3F /* OverViewController.swift */,
+				B71896F31DACDF6A006ECF3F /* OverviewTableViewCell.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,9 +161,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B71896D91DA64162006ECF3F /* ViewController.swift in Sources */,
+				B71896F01DACD2FE006ECF3F /* Person.swift in Sources */,
 				B71896D71DA64162006ECF3F /* AppDelegate.swift in Sources */,
+				B71896EE1DACD19D006ECF3F /* OverViewController.swift in Sources */,
 				B71896DF1DA64163006ECF3F /* ContactCard_App.xcdatamodeld in Sources */,
+				B71896F41DACDF6A006ECF3F /* OverviewTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
