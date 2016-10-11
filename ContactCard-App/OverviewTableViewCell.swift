@@ -11,7 +11,7 @@ import UIKit
 class OverviewTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
-    
+    @IBOutlet weak var imageVieq: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -10,30 +11,47 @@
         <scene sceneID="9YN-D4-cP2">
             <objects>
                 <tableViewController id="c41-wT-Drc" customClass="OverViewController" customModule="ContactCard_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="EFj-IT-NDO">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="123" sectionHeaderHeight="28" sectionFooterHeight="28" id="EFj-IT-NDO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="personCell" id="rwh-sl-v6q" customClass="OverviewTableViewCell" customModule="ContactCard_App" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="personCell" rowHeight="123" id="rwh-sl-v6q" customClass="OverviewTableViewCell" customModule="ContactCard_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="123"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rwh-sl-v6q" id="xhs-kA-7CV">
-                                    <frame key="frameInset" width="375" height="44"/>
+                                    <frame key="frameInset" width="375" height="122"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="nameLabel" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFa-tW-DgN" userLabel="nameLabel">
-                                            <frame key="frameInset" minX="16" minY="14" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X0O-SR-k2y">
+                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="buJ-7q-tKf"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="nameLabel" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFa-tW-DgN" userLabel="nameLabel">
                                             <accessibility key="accessibilityConfiguration" identifier="nameLabel" label="nameLabel"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="pbW-gI-Xni"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="X0O-SR-k2y" firstAttribute="top" secondItem="xhs-kA-7CV" secondAttribute="topMargin" constant="15" id="ACy-g7-kYy"/>
+                                        <constraint firstAttribute="trailing" secondItem="VFa-tW-DgN" secondAttribute="trailing" constant="18" id="J6u-rX-aNh"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="X0O-SR-k2y" secondAttribute="bottom" constant="5" id="RyF-MX-y5x"/>
+                                        <constraint firstItem="VFa-tW-DgN" firstAttribute="leading" secondItem="X0O-SR-k2y" secondAttribute="trailing" constant="10" id="WQN-ws-jSg"/>
+                                        <constraint firstItem="VFa-tW-DgN" firstAttribute="centerY" secondItem="xhs-kA-7CV" secondAttribute="centerY" constant="-10" id="pbZ-8W-Z98"/>
+                                        <constraint firstItem="X0O-SR-k2y" firstAttribute="leading" secondItem="xhs-kA-7CV" secondAttribute="leadingMargin" constant="5" id="rBh-bJ-DPl"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="imageVieq" destination="X0O-SR-k2y" id="ULu-5p-CzS"/>
                                     <outlet property="nameLabel" destination="VFa-tW-DgN" id="yLf-vP-LPI"/>
+                                    <segue destination="Qgi-kA-L6P" kind="show" identifier="detailViewSegue" id="oOg-cx-FN9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -42,10 +60,70 @@
                             <outlet property="delegate" destination="c41-wT-Drc" id="SHR-kM-iLM"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="tableView" destination="EFj-IT-NDO" id="XPR-jP-9kI"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u33-Qi-2Wq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="70" y="10"/>
+            <point key="canvasLocation" x="69.599999999999994" y="9.4452773613193415"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="cKH-lJ-1s1">
+            <objects>
+                <viewController id="Qgi-kA-L6P" customClass="DetailViewController" customModule="ContactCard_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b4U-TB-Pt3"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dv5-SJ-kJl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XbZ-fg-NEe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="New-York-City-Skyline.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ybB-cb-2Vw">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="5UQ-Ob-ybZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjS-ZC-2ue" userLabel="foreNameLabel">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="e29-dB-mGn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="udq-Pa-HQS" userLabel="personImageView">
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Aty-0a-dHA"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="J6q-ZY-1gp"/>
+                                    <constraint firstAttribute="height" constant="200" id="w3Y-BP-XkU"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ybB-cb-2Vw" firstAttribute="top" secondItem="XbZ-fg-NEe" secondAttribute="top" id="CzI-IP-rb5"/>
+                            <constraint firstAttribute="trailing" secondItem="ybB-cb-2Vw" secondAttribute="trailing" id="Gir-OT-Anx"/>
+                            <constraint firstItem="ybB-cb-2Vw" firstAttribute="leading" secondItem="XbZ-fg-NEe" secondAttribute="leading" id="Rsj-VX-Qhk"/>
+                            <constraint firstItem="kjS-ZC-2ue" firstAttribute="top" secondItem="udq-Pa-HQS" secondAttribute="bottom" constant="20" id="VGU-eh-YfJ"/>
+                            <constraint firstItem="udq-Pa-HQS" firstAttribute="centerX" secondItem="XbZ-fg-NEe" secondAttribute="centerX" id="Vpi-By-s7M"/>
+                            <constraint firstItem="udq-Pa-HQS" firstAttribute="top" secondItem="b4U-TB-Pt3" secondAttribute="bottom" constant="150" id="lzl-QM-2EF"/>
+                            <constraint firstItem="kjS-ZC-2ue" firstAttribute="centerX" secondItem="XbZ-fg-NEe" secondAttribute="centerX" id="mdc-Mc-MiV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="foreNameLabel" destination="kjS-ZC-2ue" id="Wtp-jG-vxb"/>
+                        <outlet property="imageView" destination="udq-Pa-HQS" id="U9n-Ra-sZM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zBw-PN-u3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060" y="8.5457271364317844"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="New-York-City-Skyline.jpg" width="1170" height="660"/>
+    </resources>
 </document>

@@ -11,6 +11,7 @@ import UIKit
 class OverViewController: UITableViewController {
     var persons : [Person] = []
     
+    @IBOutlet var personTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,10 +54,30 @@ class OverViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "personCell", for: indexPath) as! OverviewTableViewCell
 
         let row = indexPath.row
-        
-        cell.nameLabel?.text = persons[row].foreName
+        	
+        cell.nameLabel?.text = persons[row].foreName! + " " + persons[row].lastName!
+        cell.imageView?.backgroundColor = UIColor.blue
         return cell
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailViewSegue" {
+            
+            // Get destination controller
+            if let destination = segue.destination as? DetailViewController {
+                
+                // Get selected row and lookup selected person in array
+                if let indexPath = self.tableView.indexPathForSelectedRow {
+                    
+                    // Pass person to detailed view
+                    let person = persons[(indexPath as NSIndexPath).row]
+                    destination.person = person
+                    
+                }
+            }
+            
+        }    }
     
 
     /*

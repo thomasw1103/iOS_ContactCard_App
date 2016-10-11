@@ -15,6 +15,8 @@
 		B71896EE1DACD19D006ECF3F /* OverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71896ED1DACD19D006ECF3F /* OverViewController.swift */; };
 		B71896F01DACD2FE006ECF3F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71896EF1DACD2FE006ECF3F /* Person.swift */; };
 		B71896F41DACDF6A006ECF3F /* OverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71896F31DACDF6A006ECF3F /* OverviewTableViewCell.swift */; };
+		B7D3271B1DACE4170014163D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D3271A1DACE4170014163D /* DetailViewController.swift */; };
+		B7D3271D1DACFAD20014163D /* New-York-City-Skyline.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7D3271C1DACFAD20014163D /* New-York-City-Skyline.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		B71896ED1DACD19D006ECF3F /* OverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverViewController.swift; sourceTree = "<group>"; };
 		B71896EF1DACD2FE006ECF3F /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		B71896F31DACDF6A006ECF3F /* OverviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewTableViewCell.swift; sourceTree = "<group>"; };
+		B7D3271A1DACE4170014163D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B7D3271C1DACFAD20014163D /* New-York-City-Skyline.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "New-York-City-Skyline.jpg"; path = "../../../Desktop/New-York-City-Skyline.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		B71896D51DA64162006ECF3F /* ContactCard-App */ = {
 			isa = PBXGroup;
 			children = (
+				B7D3271C1DACFAD20014163D /* New-York-City-Skyline.jpg */,
 				B71896F21DACD36D006ECF3F /* Controllers */,
 				B71896F11DACD353006ECF3F /* Entities */,
 				B71896D61DA64162006ECF3F /* AppDelegate.swift */,
@@ -85,6 +90,7 @@
 			children = (
 				B71896ED1DACD19D006ECF3F /* OverViewController.swift */,
 				B71896F31DACDF6A006ECF3F /* OverviewTableViewCell.swift */,
+				B7D3271A1DACE4170014163D /* DetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -150,6 +156,7 @@
 			files = (
 				B71896E41DA64163006ECF3F /* LaunchScreen.storyboard in Resources */,
 				B71896E11DA64163006ECF3F /* Assets.xcassets in Resources */,
+				B7D3271D1DACFAD20014163D /* New-York-City-Skyline.jpg in Resources */,
 				B71896DC1DA64163006ECF3F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,6 +171,7 @@
 				B71896F01DACD2FE006ECF3F /* Person.swift in Sources */,
 				B71896D71DA64162006ECF3F /* AppDelegate.swift in Sources */,
 				B71896EE1DACD19D006ECF3F /* OverViewController.swift in Sources */,
+				B7D3271B1DACE4170014163D /* DetailViewController.swift in Sources */,
 				B71896DF1DA64163006ECF3F /* ContactCard_App.xcdatamodeld in Sources */,
 				B71896F41DACDF6A006ECF3F /* OverviewTableViewCell.swift in Sources */,
 			);
@@ -327,6 +335,7 @@
 				B71896EA1DA64163006ECF3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
