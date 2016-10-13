@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class OverViewController: UITableViewController {
     var persons : [Person] = []
@@ -46,6 +47,17 @@ class OverViewController: UITableViewController {
         persons.append(p1)
         let p2 = Person(foreName: "Frank", lastName: "Molengraaf", imageUrl: "Stringetje2")
         persons.append(p2)
+        
+        
+//        let url = "https://randomuser.me/api"
+//        let parameters = ["results" : "5"]
+//        Alamofire.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default).responseJSON { response in
+//            if let json = response.result.value as? Dictionary<String, Any> {
+//                let foreName =  json["results"][0] as! String
+//                print(foreName)
+//
+//            }
+//       }
         
     }
 
